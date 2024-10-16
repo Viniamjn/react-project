@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Charecter from "./components/charecter/charecter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Charecter
+          name={'Veronica Ann Bennet'}
+          status={'Alive'}
+          type={'Gazorpian'}
+          gender={'Female'}
+          img={'https://rickandmortyapi.com/api/character/avatar/376.jpeg'}>
+          <p>Lorem ipsum dolor sit amet.</p>
+          </Charecter>
+        <Charecter
+            name={'Veronica Ann Bennet'}
+            status={'Alive'}
+            type={'Gazorpian'}
+            gender={'Female'}
+            img={'https://rickandmortyapi.com/api/character/avatar/376.jpeg'}>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </Charecter>
     </div>
   );
 }
