@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import styles from '../Menu/menu';
+import styles from './Menu.module.css';
 const Menu = () => {
     return (
         <div>
-            <ul className={'menu'}>
+            <ul className={styles.menu}>
                 <li>
                     <Link to='/'>Home</Link>
                 </li>

@@ -1,14 +1,14 @@
-import React, {FC} from 'react';
-import {IUsers} from "../../models/IUsers";
-import {Link} from "react-router-dom";
+import React, { FC } from 'react';
+import { IUsers } from "../../models/IUsers";
 
 type UsersProps = {
     item: IUsers;
-}
-const User: FC<UsersProps> = ({item}) => {
+};
+
+const User: FC<UsersProps> = ({ item }) => {
     return (
         <div>
-            <Link state={{data: item}} to={item.id.toString()}>{item.firstName}</Link>
+            {item.id.toString()} {item.name}
         </div>
     );
 };

@@ -1,18 +1,25 @@
 import axios from 'axios';
-import {BaseResponseType} from "../models/BaseResponseType";
-import {IUsers} from "../models/IUsers";
 
 const axiosInstance = axios.create({
-    baseURL: 'https://dummyjson.com',
+    baseURL: 'https://jsonplaceholder.typicode.com',
     headers: {}
 });
-
-
-export const getUsers = async (): Promise<IUsers[]> => {
-    let {data: {users}} = await axiosInstance.get<BaseResponseType & { users: IUsers[] }>('/users');
-    return users
+const getAll = async <T, >(endpoint: string, callbackFn?: () => void): Promise<T> => {
+    const {data} = await axiosInstance.get<T>(endpoint);
+    return data;
 }
-export const getUser = async (id: string): Promise<IUsers> => {
 
-    return (await axiosInstance.get<IUsers>('/users/' + id)).data;
+
+export const apiService = {
+    userService: {
+        getAll
+    },
+    postService: {
+        getAll
+    },
+
+    commentService: {
+        getAll
+    },
+
 }
