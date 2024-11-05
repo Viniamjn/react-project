@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com',
+    baseURL: 'https://dummyjson.com',
     headers: {}
 
 });
@@ -12,14 +12,13 @@ const getAll = async <T, >(endpoint: string, callbackFn?: () => void): Promise<T
 
 
 export const apiService = {
-    userService: {
+    productService: {
         getAll
     },
-    postService: {
+    recipesService: {
         getAll
     },
-
-    commentService: {
+    usersService: {
         getAll
     },
 
